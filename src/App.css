@@ -1,0 +1,1455 @@
+/* Global styles for the Get Better Naturally app */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('./assets/20250714_0940_Longitudinal Acacia Wood_simple.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  line-height: 1.6;
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(248, 249, 248, 0.1);
+  pointer-events: none;
+  z-index: -1;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Page styling */
+h1, h2, h3, h4 {
+  color: #2d5a27;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  text-shadow: 1px 1px 3px rgba(7, 0, 0, 0.7);
+} 
+
+h3 {
+  font-size: 1.8rem;
+  color: #4a7c59;
+  margin-top: 2rem;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-left: 4px solid #4a7c59;
+}
+
+h2 {
+  font-size: 2.5rem;
+  border-bottom: 3px solid #4a7c59;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #4a7c59;
+  margin-top: 2rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: #5a8a65;
+}
+
+p {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+ul {
+  color: #333;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/* Card-like containers for content */
+.main-content > div {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(74, 124, 89, 0.2);
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(135deg, #2d5a27, #4a7c59);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(45, 90, 39, 0.3);
+}
+
+/* Homepage specific styles */
+.hero-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(232, 245, 232, 0.85);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(74, 124, 89, 0.3);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #2d5a27;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #4a7c59;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(74, 124, 89, 0.2);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Link feature cards should look the same */
+a.feature-card {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+a.feature-card:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #2d5a27;
+}
+
+.getting-started {
+  background: rgba(240, 248, 240, 0.85);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 2rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(74, 124, 89, 0.3);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+}
+
+.guideline-link {
+  color: #2d5a27;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.guideline-link:hover {
+  color: #4a7c59;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(45, 90, 39, 0.2);
+}
+
+/* Support/Donation Section Styling */
+.support-section {
+  background: linear-gradient(135deg, rgba(255, 248, 220, 0.9), rgba(255, 235, 205, 0.85));
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 2rem;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(218, 165, 32, 0.4);
+  box-shadow: 0 12px 50px rgba(218, 165, 32, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.support-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #DAA520, #FFD700, #FFA500, #FFD700, #DAA520);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.support-section h3 {
+  color: #B8860B;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(184, 134, 11, 0.1);
+}
+
+.support-section p {
+  color: #8B4513;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donate-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #DAA520, #FFD700);
+  color: #2d5a27;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
+  border: 2px solid rgba(255, 215, 0, 0.6);
+}
+
+.donate-btn:hover {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(218, 165, 32, 0.6);
+  color: #2d5a27;
+  text-decoration: none;
+}
+
+.donate-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
+}
+
+/* Affirmation of the Day styling */
+.affirmation-section {
+  background: rgba(232, 245, 232, 0.9);
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  margin: 1.5rem 0;
+  border: 2px solid rgba(74, 124, 89, 0.4);
+  box-shadow: 0 12px 50px rgba(74, 124, 89, 0.5);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.affirmation-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2d5a27, #4a7c59, #5a8a65, #4a7c59, #2d5a27);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
+}
+
+.affirmation-section h3 {
+  color: #2d5a27;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(45, 90, 39, 0.1);
+}
+
+.affirmation-text {
+  font-size: 1.2rem;
+  color: #2d4a27;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  border-left: 4px solid #4a7c59;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  backdrop-filter: blur(3px);
+}
+
+.affirmation-text::before {
+  content: '"';
+  font-size: 3rem;
+  color: #4a7c59;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.affirmation-text::after {
+  content: '"';
+  font-size: 3rem;
+  color: #4a7c59;
+  position: absolute;
+  bottom: -30px;
+  right: 10px;
+  opacity: 0.3;
+  font-family: serif;
+}
+
+.new-affirmation-btn {
+  background: linear-gradient(135deg, #4a7c59, #5a8a65);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(74, 124, 89, 0.3);
+  margin-top: 1rem;
+}
+
+.new-affirmation-btn:hover {
+  background: linear-gradient(135deg, #5a8a65, #6a9a75);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(74, 124, 89, 0.4);
+}
+
+.new-affirmation-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(74, 124, 89, 0.3);
+}
+
+.affirmation-citation {
+  font-size: 0.9rem;
+  color: #5a8a65;
+  font-style: normal;
+  text-align: right;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Guideline Page Styles */
+.guideline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #4a7c59;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wellness-journey {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.step-header {
+  background: linear-gradient(135deg, #2d5a27, #4a7c59);
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.step-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.step-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-style: italic;
+}
+
+.step-content {
+  padding: 2rem;
+}
+
+.step-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: #2d5a27;
+  font-style: italic;
+}
+
+.step-content h4 {
+  color: #4a7c59;
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem 0;
+  border-bottom: 2px solid #4a7c59;
+  padding-bottom: 0.5rem;
+}
+
+.action-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.action-list li {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 2rem;
+  margin-bottom: 0.5rem;
+  background: rgba(74, 124, 89, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #4a7c59;
+}
+
+.action-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+  color: #4a7c59;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.why-matters {
+  background: linear-gradient(135deg, #f8f9f8, #e8f5e8);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #4a7c59;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+
+
+.inspiration-quote {
+  background: linear-gradient(135deg, #2d5a27, #4a7c59);
+  color: white;
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  margin: 3rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.inspiration-quote blockquote {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.inspiration-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  opacity: 0.8;
+  font-style: normal;
+}
+
+.closing-message {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.closing-message h3 {
+  color: #2d5a27;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.encouragement {
+  font-size: 1.2rem;
+  color: #4a7c59;
+  font-style: italic;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+/* Step Link Section */
+.step-link {
+  background: rgba(74, 124, 89, 0.1);
+  padding: 1.2rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #4a7c59;
+}
+
+.step-link p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #2d5a27;
+}
+
+.guideline-link {
+  color: #4a7c59;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  background: rgba(74, 124, 89, 0.15);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(74, 124, 89, 0.3);
+}
+
+.guideline-link:hover {
+  background: #4a7c59;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 124, 89, 0.3);
+}
+
+/* Hint Section Styles */
+.hint-section {
+  background: linear-gradient(135deg, #f0f8f0, #e8f5e8);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(74, 124, 89, 0.15);
+  border: 2px solid rgba(74, 124, 89, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hint-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(74, 124, 89, 0.2);
+}
+
+.hint-header {
+  background: linear-gradient(135deg, #4a7c59, #5a8c69);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hint-icon {
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 3rem;
+}
+
+.hint-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.hint-content {
+  padding: 2rem;
+}
+
+.hint-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #2d5a27;
+  margin-bottom: 1.5rem;
+}
+
+/* Home Cleaning Page Specific Styles */
+.recipe-section, .room-section {
+  background: rgba(74, 124, 89, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  border-left: 4px solid #4a7c59;
+}
+
+.recipe-section h5, .room-section h5 {
+  color: #2d5a27;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recipe-section .action-list, .room-section .action-list {
+  margin-bottom: 0;
+}
+
+.recipe-section .action-list li, .room-section .action-list li {
+  background: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Enhanced step numbers with emojis */
+.step-card .step-number {
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+}
+
+/* Mobile responsive for recipe/room sections */
+@media (max-width: 768px) {
+  .recipe-section, .room-section {
+    padding: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  .recipe-section h5, .room-section h5 {
+    font-size: 1.1rem;
+  }
+  
+  .recipe-section .action-list li, .room-section .action-list li {
+    font-size: 0.9rem;
+    padding: 0.6rem 0 0.6rem 1.8rem;
+  }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.scroll-to-top button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #2c5530, #4a7c4e);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.scroll-to-top button:hover {
+  background: linear-gradient(135deg, #4a7c4e, #2c5530);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(44, 85, 48, 0.4);
+}
+
+.scroll-to-top button:active {
+  transform: translateY(0);
+}
+
+.arrow-up {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Mobile optimizations for scroll button */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .scroll-to-top button {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .arrow-up {
+    font-size: 16px;
+  }
+}
+
+/* Touch-friendly hover states for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .scroll-to-top button:hover {
+    background: linear-gradient(135deg, #2c5530, #4a7c4e);
+    transform: none;
+    box-shadow: 0 4px 15px rgba(44, 85, 48, 0.3);
+  }
+  
+  .scroll-to-top button:active {
+    background: linear-gradient(135deg, #4a7c4e, #2c5530);
+    transform: scale(0.95);
+  }
+}
+
+/* Essential Oil Profile Card Styles */
+.essential-oil-profile-card {
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.essential-oil-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.oil-profile-header {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.oil-image-container {
+  flex-shrink: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.oil-profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.oil-basic-info {
+  flex: 1;
+}
+
+.oil-name {
+  font-size: 2.5rem;
+  color: #2d5016;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.botanical-name, .also-known-as {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #5a6b3b;
+  line-height: 1.5;
+}
+
+.oil-profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.profile-section {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid #8fbc8f;
+}
+
+.profile-section h3 {
+  color: #2d5016;
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+}
+
+.profile-section h4 {
+  color: #4a6741;
+  margin: 15px 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.oil-properties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.property-item {
+  background: rgba(143, 188, 143, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.precautions {
+  background: rgba(255, 200, 200, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #ff6b6b;
+  margin-top: 15px;
+}
+
+.scent-description {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #4a6741;
+}
+
+.oil-tags, .condition-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.oil-tag {
+  background: linear-gradient(135deg, #8fbc8f, #90EE90);
+  color: #2d5016;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid rgba(45, 80, 22, 0.2);
+}
+
+.condition-tag {
+  background: linear-gradient(135deg, #b8d4b8, #d4f4d4);
+  color: #2d5016;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid rgba(45, 80, 22, 0.1);
+}
+
+.medicinal-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.medicinal-category {
+  background: rgba(143, 188, 143, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(143, 188, 143, 0.3);
+}
+
+.highlight-section {
+  background: linear-gradient(135deg, rgba(143, 188, 143, 0.2), rgba(144, 238, 144, 0.2));
+  border-left: 4px solid #90EE90;
+}
+
+.historical-note {
+  font-style: italic;
+  color: #4a6741;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 3px solid #8fbc8f;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .essential-oil-profile-card {
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .oil-profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .oil-image-container {
+    align-self: center;
+  }
+  
+  .oil-profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .oil-name {
+    font-size: 2rem;
+  }
+  
+  .oil-properties {
+    grid-template-columns: 1fr;
+  }
+  
+  .medicinal-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Swipeable Card Container for Multiple Oils */
+.oil-profiles-container {
+  padding: 20px;
+  overflow-x: auto;
+  display: flex;
+  gap: 30px;
+  scroll-snap-type: x mandatory;
+}
+
+.oil-profiles-container .essential-oil-profile-card {
+  min-width: 350px;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .oil-profiles-container {
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  .oil-profiles-container .essential-oil-profile-card {
+    min-width: 300px;
+  }
+}
+
+/* Shop Card Special Styling */
+.shop-card {
+  background: linear-gradient(135deg, rgba(218, 165, 32, 0.2), rgba(255, 215, 0, 0.2)) !important;
+  border: 2px solid rgba(218, 165, 32, 0.3) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #DAA520, #FFD700, #DAA520, #FFD700);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.shop-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 40px rgba(218, 165, 32, 0.4) !important;
+}
+
+.shop-card h3 {
+  color: #B8860B !important;
+  font-weight: bold;
+}
+
+.shop-card p {
+  color: #8B7355 !important;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Essential Oil Recipe Card Styles */
+.essential-oil-recipe-card {
+  max-width: 700px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.essential-oil-recipe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.recipe-header {
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid rgba(143, 188, 143, 0.3);
+  padding-bottom: 20px;
+}
+
+.recipe-title {
+  color: #2d5016;
+  font-size: 1.8rem;
+  margin: 0 0 15px 0;
+  font-weight: bold;
+}
+
+.recipe-meta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.recipe-difficulty {
+  background: linear-gradient(135deg, #90EE90, #8fbc8f);
+  color: #2d5016;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.recipe-time, .recipe-yield {
+  color: #4a6741;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.recipe-description {
+  background: rgba(143, 188, 143, 0.1);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 4px solid #8fbc8f;
+}
+
+.measurement-toggle {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.toggle-label {
+  display: block;
+  color: #2d5016;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.toggle-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  border: 2px solid #8fbc8f;
+  background: rgba(255, 255, 255, 0.8);
+  color: #4a6741;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.toggle-btn:hover {
+  background: rgba(143, 188, 143, 0.2);
+}
+
+.toggle-btn.active {
+  background: linear-gradient(135deg, #8fbc8f, #90EE90);
+  color: white;
+  box-shadow: 0 4px 15px rgba(143, 188, 143, 0.4);
+}
+
+.recipe-ingredients h4,
+.recipe-instructions h4,
+.recipe-usage h4,
+.recipe-benefits h4 {
+  color: #2d5016;
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  background: rgba(143, 188, 143, 0.1);
+  border-radius: 10px;
+  border-left: 3px solid #8fbc8f;
+  transition: background 0.3s ease;
+}
+
+.ingredient-item:hover {
+  background: rgba(143, 188, 143, 0.2);
+}
+
+.ingredient-amount {
+  background: #8fbc8f;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  min-width: 80px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.ingredient-name {
+  flex: 1;
+  color: #4a6741;
+  font-weight: 500;
+}
+
+.ingredient-price {
+  color: #2d5016;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.instructions-list {
+  padding-left: 0;
+  counter-reset: step-counter;
+    list-style: none; /* This removes the browser's default numbering */
+
+}
+
+.instructions-list li {
+  counter-increment: step-counter;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border-left: 4px solid #8fbc8f;
+  position: relative;
+  padding-left: 60px;
+}
+
+.instructions-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: #8fbc8f;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.usage-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.usage-item {
+  padding: 12px;
+  background: rgba(143, 188, 143, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid #8fbc8f;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(143, 188, 143, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(143, 188, 143, 0.3);
+}
+
+.benefit-icon {
+  font-size: 20px;
+}
+
+.recipe-actions {
+  margin-top: 30px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid rgba(143, 188, 143, 0.3);
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #DAA520, #FFD700);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+  background: linear-gradient(135deg, #FFD700, #DAA520);
+}
+
+.total-cost {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d5016;
+  background: rgba(143, 188, 143, 0.2);
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .essential-oil-recipe-card {
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .recipe-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .toggle-buttons {
+    flex-direction: column;
+  }
+  
+  .toggle-btn {
+    width: 100%;
+  }
+  
+  .ingredient-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .ingredient-amount {
+    margin-right: 0;
+    align-self: flex-start;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .instructions-list li {
+    padding-left: 15px;
+  }
+  
+  .instructions-list li::before {
+    position: relative;
+    margin-bottom: 10px;
+  }
+}
+
+/* Recipe Container for Multiple Recipes */
+.recipes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Recipe Reference Section */
+.recipe-reference {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border-top: 3px solid #8fbc8f;
+}
+
+.recipe-reference h4 {
+  color: #2d5016;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.reference-text {
+  color: #4a6741;
+  font-size: 13px;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .oil-profiles-carousel {
+        margin: 0 -15px;
+    }
+    
+    .oil-profiles-container {
+        border-radius: 0;
+        margin: 0 -15px;
+    }
+}
